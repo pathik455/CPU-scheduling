@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
+
+body {
+    margin: 10px 20px;
+}
+
+.instructions {
+    font-size: 14px;
+    margin: 10px 20px;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    text-align: center;
+    border: 2px solid black;
+}
+
+td {
+    padding: 0 2px;
+}
+
+table input {
+    text-align: center;
+    border: none;
+    width: 100px;
+}
+
+.process-btn {
+    height: 5px;
+}
+
+.process-btn button {
+    height: 20px;
+    width: 20px;
+    font-size: 16px;
+    background-color: transparent;
+    border: none;
+    font-weight: bolder;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    padding: 5px;
+}
+
+.schedule-table-process,
+.schedule-table-process td {
+    border: 1px solid black;
+}
+
+.schedule-table-process {
+    margin-left: 6px;
+}
+
+.schedule-table-time,
+.schedule-table-time td {
+    text-align: left;
+    border: 1px solid white;
+}
+
+#algorithm-chart-div {
+    width: 80%;
+    height: 50%;
+}
+
+#round-robin-chart-div {
+    height: 40%;
+    width: 80%;
+}
+
+#gantt-chart {
+    height: 250px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+#timeline-chart {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 250px;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+#priority-toggle-btn {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 0;
+    width: 60px;
+}
+
+.preferences {
+    list-style: none;
+}
+
+thead {
+    font-weight: bold;
+}
+
+#time-log-table-div {
+    margin-top: 10vh;
+    position: relative;
+}
+
+.time-log-table {
+    width: 10%;
+    position: absolute;
+}
+
+#remain-table {
+    left: 7.5%;
+}
+
+#ready-table {
+    left: 32.5%;
+}
+
+#running-table {
+    right: 32.5%;
+}
+
+#block-table {
+    left: 45%;
+    top: 8vw;
+}
+
+#terminate-table {
+    right: 7.5%;
+}
+
+.arrow {
+    position: absolute;
+    font-size: 100px;
+}
+
+#remain-ready {
+    left: 20.5%;
+    top: -62px;
+}
+
+#ready-running {
+    transform: rotate(180deg);
+    left: 47%;
+    top: -15px;
+    font-size: 80px;
+}
+
+#running-ready {
+    left: 47%;
+    top: -60px;
+    font-size: 80px;
+}
+
+#running-terminate {
+    right: 20.5%;
+    top: -62px;
+}
+
+#running-block {
+    transform: rotate(135deg);
+    left: 52%;
+    top: 20px;
+}
+
+#block-ready {
+    transform: rotate(225deg);
+    left: 40%;
+    top: 20px;
+}

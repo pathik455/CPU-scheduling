@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priority</title>
+    <link rel="icon" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <h1>Priority - Scheduling Algorithm</h1>
+    <h3>Preferences :</h3>
+    <ol class="preferences">
+        <li>
+            Priority : 1 is
+            <button id="priority-toggle-btn">
+                <span id="priority-preference">high</span>
+                <i class="fa fa-refresh"></i>
+            </button>
+        </li>
+        <!-- <form id="algorithms-form">
+            <label for="algo"><h3>Algorithms : </h3></label>
+            <select name="algo" id="algo">
+                <option value="fcfs">First Come First Serve (FCFS)</option>
+                <option value="sjf">Shortest Job First (SJF)</option>
+                <option value="ljf">Longest Job First (LJF)</option>
+                <option value="srtf">Shortest Remaining Job First (SRTF)</option>
+                <option value="lrtf">Longest Remaining Job First (LRTF)</option>
+                <option value="rr">Round Robin</option>
+                <option value="pnp">Priority (Non Preemptive)</option>
+                <option value="pp">Priority (Preemptive)</option>
+                <option value="hrrn">Highest Response Ratio Next (HRRN)</option>
+            </select>
+        </form> -->
+        <br>
+        <table class="main-table">
+            <thead>
+                <tr>
+                    <th class="process-id">Process ID</th>
+                    <th class="priority hide">Priority</th>
+                    <th class="arrival-time">Arrival Time</th>
+                    <th class="process-time" colspan="1">Process Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="process-id" rowspan="2">P1</td>
+                    <td class="priority hide" rowspan="2"><input type="number" min="1" step="1" value="1"></td>
+                    <td class="arrival-time" rowspan="2"><input type="number" min="0" step="1" value="0"> </td>
+                    <td class="process-time cpu process-heading" colspan="">CPU</td>
+                    <td class="process-btn"><button type="button" class="add-process-btn">+</button></td>
+                    <td class="process-btn"><button type="button" class="remove-process-btn">-</button></td>
+                </tr>
+                <tr>
+                    <td class="process-time cpu process-input"><input type="number" min="1" step="1" value="1"> </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <button type="button" class="add-btn">Add Process</button>
+        <button type="button" class="remove-btn">Delete Process</button>
+        <div id="context-switch-div">
+            <br>
+            <label for="context-switch">Context Switch Time : </label>
+            <input type="number" name="Context Switch" id="context-switch" min="0" step="1" value="0">
+        </div>
+        <div id="time-quantum" class="hide">
+            <br>
+            <label for="tq">Time Quantum : </label>
+            <input type="number" name="Time Quantum" id="tq" min="1" step="1" value="1">
+        </div>
+        <br>
+        <button type="button" id="calculate">Calculate</button>
+        <button type="button" id="reset" onClick="window.location.reload();">Reset</button>
+        <div id="output"></div>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+        <script src="priorityjs.js"></script>
+
+</body>
+
+</html>
